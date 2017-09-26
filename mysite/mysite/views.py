@@ -27,7 +27,7 @@ def hours_ahead(request, offset):   #多了一个参数offset表示时间差
     try:                            
         offset = int(offset)
     except ValueError:
-        raise Http404()             #如果不能转换，raise一个404Error
+        raise Http404()             #捕获异常，raise一个404Error
     dt = datetime.datetime.now() + datetime.timedelta(hours = offset)
     #assert False
     #html = '<html><body>In %s hour(s), it will be %s.</body></html>' % (offset,dt)

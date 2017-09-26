@@ -20,7 +20,7 @@ class Publishier(models.Model):     #所有模型自动拥有objects管理器，
 class Author(models.Model):
     first_name = models.CharField(max_length = 30)
     last_name = models.CharField(max_length = 40)
-    email = models.EmailField()
+    email = models.EmailField(blank = True, verbose_name = 'e-mail')     #该字段可选
 
     def __str__(self):
         return u'%s %s' % (self.first_name, self.last_name)
@@ -29,7 +29,7 @@ class Book(models.Model):
     title = models.CharField(max_length = 100)
     authors = models.ManyToManyField(Author)        #多对多
     publishier = models.ForeignKey(Publishier)      #一对多
-    publication_date = models.DateField()
+    publication_date = models.DateField(blank = True, null = True)  #允许字段为空
 
     def __str__(self):
         return self.title
