@@ -32,3 +32,10 @@ def hours_ahead(request, offset):   #多了一个参数offset表示时间差
     #assert False
     #html = '<html><body>In %s hour(s), it will be %s.</body></html>' % (offset,dt)
     return render_to_response('hours_ahead.html', {'hour_offset':offset, 'next_time':dt})
+
+def display_meta(request):
+    values = request.META.items()
+    #html = []
+    return render_to_response('display_meta.html', {'values':values})
+    #    html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, v))
+    #return HttpResponse('<table>%s</table>' % '\n'.join(html))

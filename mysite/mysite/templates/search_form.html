@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Search</title>
+</head>
+<body>
+	{% if errors %}
+		<ul>
+			{% for error in errors %}
+			<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+	<form action = '' method = 'get'>	
+		<!--去掉/search/，action=''表示表单提交到与当前页面相同的url，method可为get或post-->
+		<input type = 'text' name = 'q'>
+		<input type = 'submit' value = 'Search'>
+	</form>
+</body>
+</html>

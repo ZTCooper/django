@@ -16,11 +16,18 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from mysite.views import hello, current_datetime, hours_ahead	#首先import
+from mysite.views import hello, current_datetime, hours_ahead, display_meta	#首先import
+from books import views as views_b
+from contact import views as views_c
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello/$', hello),     # 找到网址里有/hello/就去call views.py 里的 hello
     url(r'^time/$', current_datetime),
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),     #re
+    url(r'^meta/$', display_meta),
+    url(r'^search_form/$', views_b.search_form),
+    url(r'^search/$', views_b.search),
+    url(r'^contact/$', views_c.contact),
+    url(r'^contact/thanks/$', views_c.thanks),
 ]

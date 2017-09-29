@@ -1,0 +1,28 @@
+{% extends "base.html"%}
+
+{% block title %}META{% endblock %}
+{% block subtitle %}Meta List{% endblock %}
+
+{% block content %}
+<!--<table>
+	{% for key,value in values %} 
+	<tr> 
+		<td>{{ key }}</td> 
+		<td>{{ value }}</td> 
+	</tr> 
+	{% empty %} 
+	<tr>
+		<td>NoData!</td>
+		<td>CheckIt!</td>
+	</tr>
+	 {% endfor %} 
+</table> -->
+<table>
+	{% for key,value in values%}
+	<tr>
+		<td>{{ key }}</td>
+		<td>{{ value }}</td>
+	{% endfor %}
+	</tr>
+</table>
+{% endblock %}

@@ -20,7 +20,8 @@ class Publishier(models.Model):     #所有模型自动拥有objects管理器，
 class Author(models.Model):
     first_name = models.CharField(max_length = 30)
     last_name = models.CharField(max_length = 40)
-    email = models.EmailField(blank = True, verbose_name = 'e-mail')     #该字段可选
+    email = models.EmailField(blank = True, verbose_name = 'e-mail')     
+                                #该字段可选，自定义字段标签
 
     def __str__(self):
         return u'%s %s' % (self.first_name, self.last_name)
