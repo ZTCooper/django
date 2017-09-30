@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'E:/Python/django/mysite/mysite/templates',
+            'E:/Python/django/mysite/templates',
             #os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
             ],
         'APP_DIRS': True,
