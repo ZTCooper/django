@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',  #会话框架
     'django.contrib.messages',  #消息框架
     'django.contrib.staticfiles',   #管理静态文件框架
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
