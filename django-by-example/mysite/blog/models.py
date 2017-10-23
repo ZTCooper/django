@@ -34,6 +34,6 @@ class Post(models.Model):
 
 	def get_absolut_url(self):
 		return reserve('blog:post_detail',
-			args = [self.publish.year, publish.strftime(%m), publish.strftime(%d), self.slug]
+			args = [self.publish.year, publish.strftime('%m'), publish.strftime('%d'), self.slug]
 			)
 
