@@ -5,7 +5,7 @@ class PostAdmin(admin.ModelAdmin):		#展示形式
 	list_display = ('title', 'slug', 'author', 'publish', 'status')		
 	list_filter = ('status', 'created', 'publish', 'author')	#侧边栏
 	search_fields = ('title', 'body')	#搜索框
-	prepopulited_fields = {'slug': ('title', )}
+	prepopulated_fields = {'slug': ('title', )}		#自动用title填充
 	raw_id_fields = ('author', )
 	date_hierarchy = 'publish'
 	odering = ['status', 'publish']
